@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Board</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #05299e;
+            /* Dark background color */
+            color: #ecf0f1;
+            /* Light text color */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            border: 2px solid #0c81cf;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #0c81cf;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0c81cf;
+            color: #fff;
+            text-align: center;
+        }
+
+        td:first-child {
+            width: 10%;
+        }
+
+        td,
+        th {
+            height: 5px;
+        }
+
+        .checkbox-container {
+            position: relative;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            position: absolute;
+            top: 100%;
+            right: -15px;
+            /* Adjusted left position for the checkbox */
+            transform: translateY(-50%);
+            /* Center the checkbox vertically */
+            width: 16px;
+            /* Adjusted width for the checkbox */
+            height: 16px;
+            /* Adjusted height for the checkbox */
+        }
+
+        .checkbox-container input,
+        .checkbox-container textarea {
+            margin-left: 15px;
+            /* Adjusted margin for spacing between checkbox and input */
+            width: calc(100% - 30px);
+            /* Adjusted width for the input fields */
+            box-sizing: border-box;
+            /* Include padding in the width */
+            background-color: transparent;
+            /* Make the background color transparent */
+            border: 0px solid #95a5a6;
+            /* Add a border for better visibility */
+            color: #ecf0f1;
+            /* Set text color */
+            padding: 8px;
+            /* Add padding for better aesthetics */
+            border-radius: 4px;
+            /* Optional: Add border-radius for rounded corners */
+        }
+
+
+
+        input {
+            width: 100%;
+            /* Make the input fields fill 95% of the cell width */
+            height: 5px;
+            /* Set the height of the input fields */
+            box-sizing: border-box;
+            /* Include padding in the width */
+            background-color: transparent;
+            /* Remove the default background color */
+            border: 0px solid #95a5a6;
+            /* Add a border for better visibility */
+            color: #ecf0f1;
+            /* Set text color */
+            padding: 20px;
+            /* Add padding for better aesthetics */
+            border-radius: 4px;
+            /* Optional: Add border-radius for rounded corners */
+        }
+
+        textarea {
+            width: 100%;
+            /* Make the textarea fill 95% of the cell width */
+            height: 100px;
+            /* Set the initial height of the textarea */
+            box-sizing: border-box;
+            /* Include padding in the width */
+            background-color: transparent;
+            /* Make the background color transparent */
+            border: 0px solid #95a5a6;
+            /* Add a border for better visibility */
+            color: #ecf0f1;
+            /* Set text color */
+            padding: 8px;
+            /* Add padding for better aesthetics */
+            border-radius: 4px;
+            /* Optional: Add border-radius for rounded corners */
+            resize: vertical;
+            /* Allow vertical resizing of the textarea */
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            /* Use the Pacifico font for English */
+            color: #ffffff;
+            text-align: center;
+            font-size: 50px;
+            -webkit-text-stroke: 0.5px rgb(9, 3, 66);
+            text-stroke: 0.5px rgb(9, 3, 66);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+            /* Light gray text color */
+            /* background-color: #062f57; */
+            /* Background color for the footer */
+            /* padding: 20px; */
+            /* Add padding for better visibility */
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap">
+</head>
+
+<body>
+
+    <h1>The Board</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: #010e1b;">POINTS</th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="background-color: #ff9f00;">5</td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ff9f00;">10</td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ff9f00;">20</td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ff9f00;">40</td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+                <td style="background-color: #130233;">
+                    <div class="checkbox-container"><input type="checkbox"><textarea class="column-input"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ff9f00;">SUM</td>
+                <td style="background-color: #130233;" id="sumColumn2"><input type="number" class="column-input"></td>
+                <td style="background-color: #130233;" id="sumColumn3"><input type="number" class="column-input"></td>
+                <td style="background-color: #130233;"><input type="number" class="column-input"></td>
+                <td style="background-color: #130233;"><input type="number" class="column-input"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+                <th style="background-color: #032546;">
+                    <div><input type="text">
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        &copy; 2024 Thomas.<br>All Rights Reserved.
+    </footer>
+</body>
+
+</html>
